@@ -365,7 +365,10 @@ def cmd_overlay(a):
     sp = read_spec(f"{a.dir}/spec.txt")
     total = dur(f"{a.dir}/bg.mp4")
     args, fc, prev = ["-i", f"{a.dir}/bg.mp4"], "", "0:v"
+    last = max(e for _, _, e in sp)
     for k, (n, s, e) in enumerate(sp, 1):
+        if e == last:  # 영상이 프레임 반올림으로 조금 더 길어도 마지막 장면 자막이 끝까지 깔리게 (빈 마지막 프레임 방지)
+            e = max(e, total + 1)
         args += ["-loop", "1", "-t", f"{total:.3f}", "-i", f"{a.dir}/ov/{n}.png"]
         fd = "" if s == 0 else f",fade=in:st={s}:d=0.15:alpha=1"
         fc += f"[{k}:v]format=rgba{fd}[o{k}];[{prev}][o{k}]overlay=0:0:enable='between(t,{s},{e - 0.001})'[m{k}];"
