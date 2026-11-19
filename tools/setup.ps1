@@ -1,4 +1,4 @@
-# DA 릴스 스킬 설치 점검 (윈도우). 여러 번 실행해도 안전.
+﻿# DA 릴스 스킬 설치 점검 (윈도우). 여러 번 실행해도 안전.
 # 실행: powershell -NoProfile -ExecutionPolicy Bypass -File setup.ps1
 $ErrorActionPreference = "Continue"
 function ok($m) { Write-Host "✅ $m" }
