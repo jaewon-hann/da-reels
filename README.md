@@ -6,7 +6,7 @@
 ## 1. 처음 한 번만
 1. **스킬 넣기**: 터미널에 아래 한 줄 붙여넣기
    ```
-   git clone https://github.com/myrealtrip/da-reels.git ~/.claude/skills/da-reels
+   git clone https://github.com/jaewon-hann/da-reels.git ~/.claude/skills/da-reels
    ```
    - 깃이 어렵다면: 이 페이지 초록색 `Code` → `Download ZIP` → 압축 풀고 폴더 이름을 `da-reels` 로 바꿔 `~/.claude/skills/` 안에 복사 (파인더 `Cmd+Shift+G` → `~/.claude/skills`)
    - 업데이트: `git -C ~/.claude/skills/da-reels pull`
@@ -20,7 +20,7 @@
 5. **Vrew 가입·로그인**: https://vrew.ai (무료) — 목소리 만들 때 사용
 
 ### 윈도우라면 (위 1~2번 대신)
-1. Git Bash 에서 `git clone https://github.com/myrealtrip/da-reels.git ~/.claude/skills/da-reels`
+1. Git Bash 에서 `git clone https://github.com/jaewon-hann/da-reels.git ~/.claude/skills/da-reels`
    - 또는 `Download ZIP` → 폴더 이름 `da-reels` 로 `C:\Users\<내 이름>\.claude\skills\` 안에 복사 (탐색기 주소창에 `%USERPROFILE%\.claude\skills`)
 2. Claude Code 재시작 후 `/da-reels 점검` → ffmpeg·파이썬을 확인하고 없으면 설치해 줘요
    - ffmpeg 를 새로 깔았다면 Claude Code 를 한 번 더 껐다 켜 주세요
